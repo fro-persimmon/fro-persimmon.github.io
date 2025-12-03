@@ -1,0 +1,91 @@
+/* 针对 Hexo 的居中布局样式 */
+.post-content-container {
+    max-width: var(--content-width, 800px);
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.post-content {
+    background: var(--card-bg, #fff);
+    border-radius: var(--card-radius, 8px);
+    padding: var(--card-padding, 2rem);
+    box-shadow: var(--card-shadow, 0 2px 8px rgba(0,0,0,0.1));
+    overflow: hidden;
+}
+
+/* Markdown 内容样式 */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--heading-color);
+}
+
+.post-content h1 {
+    font-size: 1.875rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.3em;
+}
+
+.post-content h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.3em;
+}
+
+.post-content p {
+    margin: 1em 0;
+    line-height: 1.7;
+}
+
+.post-content ul,
+.post-content ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+.post-content code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background: var(--code-bg, #f6f8fa);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background: var(--pre-bg, #f6f8fa);
+    padding: 1em;
+    border-radius: 6px;
+    overflow: auto;
+    margin: 1.5em 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .post-content-container {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+    
+    .post-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-content-container {
+        padding: 0 0.75rem;
+    }
+    
+    .post-content {
+        padding: 1rem;
+    }
+}
